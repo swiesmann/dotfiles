@@ -1,10 +1,16 @@
-ctrlCmdShortcuts = {
+local hyperKey = { 'cmd', 'alt', 'ctrl', 'shift' }
+
+hyperKeyShortcuts = {
     { "1", "Brave Browser" },
     { "2", "IntelliJ IDEA Ultimate" },
+    { "3", "MacPass" },
+    { "4", "/Applications/Obsidian.app" },
+    --    anytype, signal VS teams, reaper
 }
 
-for i, shortcut in ipairs(ctrlCmdShortcuts) do
-    hs.hotkey.bind({ "alt", "cmd", "ctrl", "shift" }, shortcut[1], function()
+for i, shortcut in ipairs(hyperKeyShortcuts) do
+    hs.hotkey.bind(hyperKey, shortcut[1], function()
         hs.application.launchOrFocus(shortcut[2])
+        --hs.application.launchOrFocusByBundleID(shortcut[2])
     end)
 end
