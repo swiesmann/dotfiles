@@ -3,8 +3,9 @@ local hyperKey = { 'cmd', 'alt', 'ctrl', 'shift' }
 hyperKeyShortcuts = {
     { "1", "Brave Browser" },
     { "2", "IntelliJ IDEA Ultimate" },
-    { "3", "MacPass" },
-    { "4", "/Applications/Obsidian.app" },
+    { "3", "ghostty.app" },
+    { "4", "KeePassXC" },
+    { "5", "/Applications/Obsidian.app" },
     --    anytype, signal VS teams, reaper
 }
 
