@@ -131,6 +131,9 @@ export XDG_DATA_DIRS="/opt/homebrew/share:$XDG_DATA_DIRS"
 # lm-studio
 path_if_exists "$HOME/.cache/lm-studio/bin"
 
+# spicetify
+path_if_exists "$HOME/.spicetify"
+
 # jbang
 if [ -d "$HOME/.jbang/bin" ]; then
     alias j!=jbang
