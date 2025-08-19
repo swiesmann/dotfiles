@@ -4,7 +4,7 @@ hyperKeyShortcuts = {
     { "1", "Brave Browser" },
     { "2", "IntelliJ IDEA Ultimate" },
     { "3", "ghostty.app" },
-    { "4", "MacPass" },
+    { "4", "MacPass.app" },
     { "5", "/Applications/Obsidian.app" },
     --    anytype, signal VS teams, reaper
 }
