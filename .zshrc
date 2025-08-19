@@ -93,8 +93,8 @@ alias ls="eza"
 alias c="bat"
 
 source_if_exists "$HOME/scripts/github-auth.sh"
-path_if_exists "/Users/simon.wiesmann/repos/otto/fti_toolbox/aws"
-path_if_exists "/Users/simon.wiesmann/scripts"
+path_if_exists "$HOME/repos/otto/fti_toolbox/aws"
+path_if_exists "$HOME/scripts"
 
 
 
