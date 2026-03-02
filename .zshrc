@@ -115,13 +115,6 @@ if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
     export TERM=xterm-256color
 fi
 
-# asdf
-path_if_exists "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
-#. /opt/homebrew/opt/asdf/libexec/asdf.sh
-source_if_exists "$HOME/.asdf/plugins/java/set-java-home.zsh"
-# asdf rust plugin
-export RUST_WITHOUT=rust-docs
-
 # fabric
 source_if_exists "$HOME/.config/fabric/fabric-bootstrap.inc"
 
@@ -133,6 +126,9 @@ path_if_exists "$HOME/.cache/lm-studio/bin"
 
 # spicetify
 path_if_exists "$HOME/.spicetify"
+
+# deno
+path_if_exists "$HOME/.deno/bin"
 
 # jbang
 if [ -d "$HOME/.jbang/bin" ]; then
@@ -165,3 +161,20 @@ then
     export TESTCONTAINERS_HOST_OVERRIDE=$(colima ls -j | jq -r '.address')
     export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/simonwiesmann/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
+
+# Added by Antigravity
+export PATH="/Users/simonwiesmann/.antigravity/antigravity/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/simonwiesmann/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+eval "$(mise activate zsh)"
